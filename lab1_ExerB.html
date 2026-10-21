@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Campus Coding Club - Home</title>
+</head>
+<body>
+
+    <!--
+    Errors Identified from Given Code:
+    1. Line 1: Missing <!DOCTYPE html> declaration and missing lang="en" on <html>
+    2. Line 3: Missing closing </title> tag
+    3. Line 7: Mismatched heading tag (opened with <h1>, closed with </h2>)
+    4. Line 8: Improper tag nesting (<strong><em>Wednesday</strong></em>)
+    5. Line 9: Heading closed with <h2> instead of </h2>
+    6. Line 11: Missing closing </li> tag
+    7. Line 10/14: List tag mismatch (opened with <ul>, closed with </ol>)
+    8. Line 15: href attribute missing quotes and URI protocol (https://)
+    9. Line 16: <img> missing required alt attribute
+    10. Line 17: Special characters not encoded (&copy; and &amp;)
+    -->
+
+    <!-- Relative Navigation Bar -->
+    <nav>
+        <a href="lab1_ExerB.html">Home</a> | <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Campus Coding Club</h1>
+        <p>We meet every <strong><em>Wednesday</em></strong> at Lab 3.</p>
+    </header>
+
+    <main>
+        <!-- Club Activities Section -->
+        <section>
+            <h2>Our Activities</h2>
+            <ul>
+                <li>Weekly coding sessions</li>
+                <li>Hackathon</li>
+                <li>Web design workshop</li>
+            </ul>
+        </section>
+
+        <!-- Club Advisor Quote Section -->
+        <section>
+            <h2>Message from Club Advisor</h2>
+            <blockquote>
+                "Consistency in coding transforms curious beginners into industry-ready problem solvers."
+            </blockquote>
+        </section>
+
+        <!-- External Link and Image Section -->
+        <section>
+            <h2>About Our University</h2>
+            <p>Visit our university: <a href="https://www.umt.edu.my">UMT Website</a></p>
+            <img src="comtech.jpg" alt="Campus Coding Club members collaborating in computer lab">
+        </section>
+       
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Campus Coding Club &amp; Friends</p>
+    </footer>
+
+</body>
+</html>
