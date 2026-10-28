@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Software Engineering Career Day 2026</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Event Title and Tagline -->
+    <header>
+        <h1>Software Engineering Career Day 2026</h1>
+        <p>Connecting future software engineers with top tech industry leaders.</p>
+    </header>
+
+    <!-- Navigation Bar with Internal Links -->
+    <nav>
+        <ul>
+            <li><a href="#about">About the Event</a></li>
+            <li><a href="#schedule">Event Schedule</a></li>
+            <li><a href="#register">Registration</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section 1: About the Event -->
+    <section id="about">
+        <h2>About the Event</h2>
+        
+        <article>
+            <h3>Keynote Speaker: Dr. Zulkifli</h3>
+            <p>An insightful session on the future of Artificial Intelligence and Software Engineering trends in 2026.</p>
+        </article>
+
+        <article>
+            <h3>Activity: Live Hackathon Pitch</h3>
+            <p>Students present their innovative mobile and web applications to a panel of expert judges from top tech firms.</p>
+        </article>
+    </section>
+
+    <!-- Section 2: Event Schedule Table -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        <table style="width: 100%;">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                    <th>Person in Charge</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:30 AM - 09:00 AM</td>
+                    <td>Participant Registration</td>
+                    <td rowspan="2">Main Hall</td>
+                    <td>Ur. Fatiha</td>
+                </tr>
+                <tr>
+                    <td>09:00 AM - 10:30 AM</td>
+                    <td>Opening Ceremony & Keynote</td>
+                    <td>Dr. Zulkifli</td>
+                </tr>
+                <tr>
+                    <td>10:30 AM - 12:30 PM</td>
+                    <td>Tech Industry Panel Discussion</td>
+                    <td>Auditorium A</td>
+                    <td>Mr. Ray</td>
+                </tr>
+                <tr>
+                    <td>12:30 PM - 02:00 PM</td>
+                    <td colspan="3">Networking Lunch Break</td>
+                </tr>
+                <tr>
+                    <td>02:00 PM - 04:00 PM</td>
+                    <td>Live Coding & Hackathon Pitch</td>
+                    <td rowspan="2">Lab 3, FKMT</td>
+                    <td>Ms. Zaina</td>
+                </tr>
+                <tr>
+                    <td>04:00 PM - 05:00 PM</td>
+                    <td>Closing & Award Ceremony</td>
+                    <td>Dean Faculty</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Section 3: Registration Form -->
+    <section id="register">
+        <h2>Registration Form</h2>
+        <form action="register.html" method="post">
+            
+            <!-- Text Inputs -->
+            <div>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <br>
+            <div>
+                <label for="matricnum">Matric Number:</label>
+                <input type="text" id="matricnum" name="matricnum" required>
+            </div>
+            <br>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <br>
+
+            <!-- Radio Buttons for Year of Study -->
+            <fieldset>
+                <legend>Year of Study:</legend>
+                <input type="radio" id="year1" name="year_study" value="Year 1">
+                <label for="year1">Year 1</label><br>
+                <input type="radio" id="year2" name="year_study" value="Year 2">
+                <label for="year2">Year 2</label><br>
+                <input type="radio" id="year3" name="year_study" value="Year 3">
+                <label for="year3">Year 3</label><br>
+                <input type="radio" id="year4" name="year_study" value="Year 4">
+                <label for="year4">Year 4</label>
+            </fieldset>
+            <br>
+
+            <!-- Checkboxes for Sessions -->
+            <fieldset>
+                <legend>Sessions to Join (At least 3 choices):</legend>
+                <input type="checkbox" id="session1" name="sessions" value="Keynote">
+                <label for="session1">Opening Keynote</label><br>
+                <input type="checkbox" id="session2" name="sessions" value="Panel">
+                <label for="session2">Tech Panel Discussion</label><br>
+                <input type="checkbox" id="session3" name="sessions" value="Hackathon">
+                <label for="session3">Hackathon Pitch</label>
+            </fieldset>
+            <br>
+
+            <!-- Drop-down list for Programme -->
+            <div>
+                <label for="programme">Programme / Faculty:</label>
+                <select id="programme" name="programme">
+                    <option value="se">Software Engineering</option>
+                    <option value="cs">Matrix / Computer Science</option>
+                    <option value="it">Information Technology</option>
+                    <option value="ds">Data Science</option>
+                </select>
+            </div>
+            <br>
+
+            <!-- Submit Button -->
+            <div>
+                <input type="submit" value="Register Now">
+            </div>
+
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Faculty of Computer Science and Mathematics, UMT. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
