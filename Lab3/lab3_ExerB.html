@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+
+    <!-- 
+      Part 1: Error List & Line Numbers:
+      1. Line 1: Missing proper DOCTYPE declaration (was just <!DOCTYPE>).
+      2. Line 9: Missing closing span tag for '<span>Your Campus Cinema</h1></span>'.
+      3. Line 11: Incorrect tag used for content section (<span id="content"> instead of <div id="content">).
+      4. Line 14: Incorrect formula in oninput for ticket count (used '+' which concatenates strings instead of adding numbers).
+      5. Line 18: Typo in email type attribute (<input type="emial"> instead of type="email").
+      6. Line 23: Datalist id mismatch (<datalist id="movielist"> instead of id="movies").
+      7. Line 32: Range slider attributes incorrect (min="5" max="1" instead of min="1" max="5").
+      8. Line 33: Output 'for' attribute has incorrect reference ('adult kid' instead of 'adult child').
+      9. Line 38: Incorrect copyright entity casing (&Copy; instead of &copy;).
+    -->
+
+    <!-- Header Section -->
+    <div id="header">
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+    </div>
+
+    <!-- Content Section -->
+    <div id="content">
+        <h2>Book Your Ticket</h2>
+        <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+
+        <!-- Part 2: Form with updated calculations for Total Tickets and Total Price -->
+        <form action="booking.php" oninput="total.value = Number(adult.value) + Number(child.value); price.value = (Number(adult.value) * 12) + (Number(child.value) * 8);">
+            
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <!-- Part 2: Added phone number (type="tel") and show time (type="time") -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="012-3456789" required><br><br>
+
+            <label for="date">Show date: </label>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="time">Show time: </label>
+            <input type="time" id="time" name="time" required><br><br>
+
+            <label for="movie">Movie:</label>
+            <input id="movie" name="movie" list="movies" required>
+            <datalist id="movies">
+                <option value="Space Rangers">
+                <option value="Kampung Comedy">
+                <option value="Mystery Island">
+            </datalist><br><br>
+
+            <label for="adult">Adult tickets (RM 12):</label>
+            <input type="number" id="adult" name="adult" min="0" value="0"><br><br>
+
+            <label for="child">Child tickets (RM 8):</label>
+            <input type="number" id="child" name="child" min="0" value="0"><br><br>
+
+            <label for="rating">Rate our service: </label>
+            <input type="range" id="rating" name="rating" min="1" max="5"><br><br>
+
+            Total tickets: <output name="total" for="adult child">0</output><br>
+            <!-- Part 2: Added second output for total price calculation -->
+            Total Price (RM): <output name="price" for="adult child">0</output><br><br>
+
+            <input type="submit" value="Book Now">
+        </form>
+    </div>
+
+    <!-- Part 2: Sidebar with at least 3 movies using strong, span, and a tags -->
+    <div id="sidebar">
+        <h3>Now Showing</h3>
+        <ul>
+            <li><strong>Space Rangers</strong> - <span>PG-13</span> | <a href="#trailer1">Watch Trailer</a></li>
+            <li><strong>Kampung Comedy</strong> - <span>U</span> | <a href="#trailer2">Watch Trailer</a></li>
+            <li><strong>Mystery Island</strong> - <span>18</span> | <a href="#trailer3">Watch Trailer</a></li>
+        </ul>
+    </div>
+
+    <!-- Part 2: Footer with specific text and correct entities -->
+    <div id="footer">
+        <p>&copy; 2026 e-Ticket&reg; - Campus Cinema &lt; RM10 every Tuesday</p>
+    </div>
+
+</body>
+</html>
