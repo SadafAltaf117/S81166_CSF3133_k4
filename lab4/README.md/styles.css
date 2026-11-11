@@ -1,0 +1,341 @@
+/* =========================================================
+   1. Base Reset & Layout Properties
+   ========================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f5;
+  color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 960px;
+  width: 90%;
+  margin: 25px auto;
+  flex: 1;
+}
+
+/* =========================================================
+   2. Header & Text-Decoration Requirements
+   ========================================================= */
+header {
+  background-color: #1b382b;
+  color: #ffffff;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+/* Heading 1: Text-decoration overline */
+header h1 {
+  font-size: 2.2rem;
+  text-decoration: overline;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Heading 2: Text-decoration underline */
+h2 {
+  color: #1b382b;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  margin-bottom: 18px;
+}
+
+/* =========================================================
+   3. Navigation Bar & Link Pseudo-Classes
+   Order strictly: :link -> :visited -> :hover -> :active
+   ========================================================= */
+nav {
+  background-color: #2e5a44;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.nav-menu li {
+  margin: 0;
+}
+
+/* a:link */
+.nav-menu a:link {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 14px 22px;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* a:visited */
+.nav-menu a:visited {
+  color: #d1e3d9;
+}
+
+/* a:hover */
+.nav-menu a:hover {
+  background-color: #1b382b;
+  color: #f9d342;
+}
+
+/* a:active */
+.nav-menu a:active {
+  background-color: #0f2018;
+  color: #ffffff;
+}
+
+/* =========================================================
+   4. Section & ID Selectors (#destinations, #video, #trip)
+   ========================================================= */
+#destinations,
+#video,
+#trip {
+  background-color: #ffffff;
+  padding: 24px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border: 1px solid #dcdfdc;
+}
+
+/* Destinations Cards Grid */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+/* Class Selector: .card */
+.card {
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h3 {
+  color: #2e5a44;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.92rem;
+  margin-bottom: 12px;
+}
+
+/* Old price & New price styles */
+.price-container {
+  margin-top: auto;
+  font-size: 1rem;
+}
+
+/* Class Selector: .old-price with line-through */
+.old-price {
+  text-decoration: line-through;
+  color: #888888;
+  margin-right: 8px;
+}
+
+.new-price {
+  font-weight: bold;
+  color: #c62828;
+  font-size: 1.15rem;
+}
+
+/* Meter Element Styling */
+meter {
+  width: 100%;
+  max-width: 320px;
+  height: 20px;
+  margin: 8px 0;
+}
+
+.meter-note {
+  font-size: 0.85rem;
+  color: #555555;
+  font-style: italic;
+}
+
+/* =========================================================
+   5. Media (Video Responsiveness & Caption)
+   ========================================================= */
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+figure {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+}
+
+/* Responsive video rule */
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background-color: #000000;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #666666;
+  font-style: italic;
+}
+
+/* =========================================================
+   6. Form Design (Class Selector .trip-form)
+   ========================================================= */
+.trip-form {
+  background-color: #f9fbf9;
+  padding: 22px;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label,
+.group-title {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #b0bec5;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-color: #2e5a44;
+}
+
+.options-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.options-group label {
+  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+}
+
+.btn-submit {
+  background-color: #2e5a44;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #1b382b;
+}
+
+/* =========================================================
+   7. Footer & Address Styling
+   ========================================================= */
+footer {
+  background-color: #1b382b;
+  color: #d1e3d9;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  margin-top: auto;
+}
+
+footer address {
+  font-style: normal;
+  margin-top: 6px;
+}
+
+.footer-mail:link {
+  color: #81c784;
+}
+
+.footer-mail:visited {
+  color: #a5d6a7;
+}
+
+.footer-mail:hover {
+  color: #ffffff;
+}
+
+/* =========================================================
+   8. Responsive Media Queries
+   ========================================================= */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+  }
+
+  .nav-menu a:link {
+    padding: 10px 15px;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+}

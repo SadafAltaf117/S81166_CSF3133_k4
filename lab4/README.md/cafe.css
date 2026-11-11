@@ -1,0 +1,251 @@
+/* =========================================================
+   1. Base Reset & Layout
+   ========================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fcfbf7;
+  color: #333333;
+}
+
+.page-container {
+  width: 90%;
+  max-width: 850px;
+  margin: 24px auto;
+}
+
+header {
+  background-color: #f7ede2;
+  padding: 24px 16px;
+  text-align: center;
+  border-bottom: 2px solid #e2d4c0;
+}
+
+/* =========================================================
+   2. Navigation Bar (External CSS Requirements)
+   - list-style-type: none
+   - display: block
+   - text-transform: uppercase
+   - text-decoration: none
+   - background-color & padding
+   - hover effect
+   ========================================================= */
+nav {
+  background-color: #1A5276;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Link States: Correct LVHA order */
+.nav-list a:link {
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.nav-list a:visited {
+  color: #d4e6f1;
+}
+
+.nav-list a:hover {
+  background-color: #E67E22;
+  color: #ffffff;
+}
+
+.nav-list a:active {
+  background-color: #C0392B;
+  color: #ffffff;
+}
+
+/* =========================================================
+   3. Sections & Cards
+   ========================================================= */
+section {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  border: 1px solid #e8e6df;
+}
+
+h2 {
+  color: #1A5276;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #f2ede4;
+  padding-bottom: 6px;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.item-card {
+  background-color: #faf9f6;
+  padding: 14px;
+  border-radius: 4px;
+  border: 1px solid #ebdccb;
+}
+
+.item-card h3 {
+  color: #78281f;
+  margin-bottom: 6px;
+}
+
+/* =========================================================
+   4. Video Styling (Responsive max-width: 100%)
+   ========================================================= */
+.video-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #666666;
+  font-style: italic;
+}
+
+/* =========================================================
+   5. Feedback Form (.feedback-form class)
+   ========================================================= */
+.feedback-form {
+  background-color: #faf9f6;
+  padding: 20px;
+  border: 1px solid #ded5c5;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label,
+.group-label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #2c3e50;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-color: #1A5276;
+}
+
+.radio-options,
+.checkbox-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.radio-options label,
+.checkbox-options label {
+  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.submit-button {
+  background-color: #1A5276;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #E67E22;
+}
+
+/* =========================================================
+   6. Footer & Address
+   ========================================================= */
+footer {
+  background-color: #1A5276;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  font-size: 0.85rem;
+}
+
+footer address {
+  font-style: normal;
+  margin-top: 6px;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  color: #f7dc6f;
+  text-decoration: underline;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+/* =========================================================
+   7. Media Queries for Mobile Responsiveness
+   ========================================================= */
+@media (max-width: 600px) {
+  .nav-list {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .submit-button {
+    width: 100%;
+  }
+}
