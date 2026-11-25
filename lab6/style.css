@@ -1,0 +1,115 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 20px;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #1b4f72;
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    margin: 0 0 8px 0;
+}
+
+header p {
+    margin: 0;
+}
+
+/* Card Sections */
+.card {
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+/* Button Styling and Hover Effect */
+button {
+    padding: 8px 16px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 6px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #1f618d;
+}
+
+/* Game Arena and Fixed Image Size */
+.arena {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.arena img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.vs {
+    color: #777;
+}
+
+/* Result and Scoreboard */
+#result {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.scoreboard {
+    font-size: 16px;
+}
+
+/* History Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #1b4f72;
+    color: white;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+}
